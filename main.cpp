@@ -97,19 +97,6 @@ public:
         delete delptr;
     }
 
-    void replacenodes(int item1, int item2){
-        Node* temp1 = head;
-        Node* temp2 =head;
-        while (temp1->data != item1 && temp1!= nullptr){
-            temp1= temp1->next;
-        }
-        while (temp2->data != item2 && temp2!= nullptr){
-            temp2 = temp2->next;
-        }
-        temp1->next = temp2->next;
-        temp2->next = temp1;
-    }
-
 
 };
 
@@ -144,8 +131,7 @@ int main()
     cin>>delitem;
     lst.deletitem(delitem);
     lst.display();
-    lst.replacenodes(20,30);
-    lst.display();
+    
 
 
 
